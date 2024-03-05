@@ -1,0 +1,26 @@
+<section class="seccion">
+  <form class="formulario">
+    <h2>Datos del cliente</h2>
+    <div class="from_input">
+      <label >Nombre:</label>
+      <input type="text" name="nombrepadre"  [(ngModel)]="nombrepadre">
+    </div>
+    <div class="from_input">
+      <label >Apellido:</label>
+      <input type="text" name="apellido" [(ngModel)]="apellido">
+    </div>
+    <div class="from_input">
+      <label>Edad:</label>
+      <input type="text" name="edad" [(ngModel)]="edad">
+    </div>
+    <button type="reset" (click)="enviar()">enviar</button>
+  
+    <app-datos 
+    [nombre]="enviardatos" 
+    [apellido]="apellidoenviado"
+    [edadh]="edadenviar"
+    (enviarDatos)="mensajerecido($event)"
+    ></app-datos>
+  </form>
+</section>
+
