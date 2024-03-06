@@ -1,4 +1,9 @@
 .caja_registro{
  font-weight: bold;
-    
+ align-self: normal;
+
+}
+.container__boton{
+    width: 100%;
+    text-align: center;
 }

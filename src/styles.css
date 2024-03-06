@@ -3,4 +3,22 @@ body{
     box-sizing: border-box;
     height: 100vh;
     margin: 0;
+
+}
+*{
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+button{
+    height: 5vh;
+    width: 80%;
+    font-weight: bold;
+    border: 0;
+    border-radius: 20px;
+    background: rgba(37, 17, 65, 0.422);
+    color: white;
+}
+button:hover{
+ background-color: rgba(115, 72, 167, 0.48);
 }
