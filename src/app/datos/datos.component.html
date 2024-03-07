@@ -1,8 +1,28 @@
-<div class="caja_registro">
-    <p>Nombre:{{nombre}}</p>
+<table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Edad</th>
+        <th>Procesos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ nombre }}</td>
+        <td>{{ apellido }}</td>
+        <td>{{ edadh }}</td>
+        <td>
+            <button  class="btn-editar"> <i class="fas fa-edit"></i> </button>
+            <button class="btn-eliminar"> <i class="fas fa-trash"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+ <!--    <p>Nombre:{{nombre}}</p>
     <p>Apellido:{{apellido}}</p>
     <p>Edad:{{edadh}}</p>
     <div class="container__boton">
         <button class="button__style-width"  (click)="datosaenviar()">enviar</button>
-    </div>
-</div>
+    </div> -->
