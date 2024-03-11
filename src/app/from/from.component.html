@@ -17,11 +17,8 @@
       <button type="reset" (click)="enviar()">enviar</button>
     </div>
   </form>
-  <app-datos 
-  [nombre]="enviardatos" 
-  [apellido]="apellidoenviado"
-  [edadh]="edadenviar"
-  (enviarDatos)="mensajerecido($event)"
+  <app-datos [datos]="datos"
+  (enviarDatos)="recibirDatosDelHijo($event)"
   ></app-datos> 
 </section>
 

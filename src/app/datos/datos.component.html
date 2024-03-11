@@ -1,4 +1,31 @@
-<table>
+<table class="table table-striped-columns">
+  <thead>
+    <tr class="table_tr">
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Edad</th>
+    </tr>
+  </thead>
+  <tbody>
+      @for( dato of datos ;track  $index){
+        <tr class="table_tr">
+          <td class="table_td">{{ $index  + 1}}</td>
+          <td class="table_td">{{ dato.nombre }}</td>
+          <td class="table_td">{{ dato.apellido }}</td>
+          <td class="table_td">{{ dato.edad }}</td>
+        <td>
+            <button  class="btn-editar" (click)="enviarDatosAlPadre()"><i class="fas fa-edit"></i></button>
+            <button class="btn-eliminar"> <i class="fas fa-trash"></i></button>
+        </td>
+      </tr>
+      }
+  </tbody>
+</table>
+
+
+
+<!-- <table style="border: 1px solid red;">
     <thead>
       <tr>
         <th>Nombre</th>
@@ -7,18 +34,22 @@
         <th>Procesos</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>{{ nombre }}</td>
-        <td>{{ apellido }}</td>
-        <td>{{ edadh }}</td>
+    <tbody  style="border: 1px solid green;">
+      @for( dato of datos ;track  $index){
+        <tr>
+          <td>{{ dato.nombre }}</td>
+          <td>{{ dato.apellido }}</td>
+          <td>{{ dato.edad }}</td>
         <td>
             <button  class="btn-editar"> <i class="fas fa-edit"></i> </button>
             <button class="btn-eliminar"> <i class="fas fa-trash"></i></button>
         </td>
       </tr>
+
+      }
+     
     </tbody>
-  </table>
+  </table> -->
   
  <!--    <p>Nombre:{{nombre}}</p>
     <p>Apellido:{{apellido}}</p>

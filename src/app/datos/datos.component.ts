@@ -8,14 +8,22 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './datos.component.css' 
 })
 export class DatosComponent {
-
-  @Input() nombre:string= "" ;
-  @Input() apellido:string= "";
-  @Input() edadh = "";
+  @Input() datos: any[] = [];
+  @Output() enviarDatos = new EventEmitter<any>();
 
   
-   misdatos:any={}
+  enviarDatosAlPadre() {
+    this.enviarDatos.emit(this.datos);
+  }
 
+  
+}
+
+
+  /* @Input() nombre:string= "" ;
+  @Input() apellido:string= "";
+  @Input() edadh = "";
+   misdatos:any={}
   @Output() enviarDatos  = new EventEmitter<string>()
 
   datosaenviar(){
@@ -24,7 +32,5 @@ export class DatosComponent {
       apellido: this.apellido,
       edad: this.edadh
     }
-    this.enviarDatos.emit(this.misdatos)
-  }
-
-}
+    
+  } */

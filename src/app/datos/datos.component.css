@@ -8,7 +8,7 @@
     text-align: center;
 }
 /* tabla.component.css */
-.btn-editar,
+/* .btn-editar,
 .btn-eliminar {
   border: none;
   background-color: transparent;
@@ -23,4 +23,24 @@
 .btn-editar i,
 .btn-eliminar i {
   font-size: 18px;
+} */
+
+/* Estilos para la tabla */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table_tr{
+  border-bottom: 1px solid #f50000; 
+}
+
+.table_td, th {
+  padding: 8px;
+  text-align: left; 
+}
+
+th {
+  background-color: #f2f2f2; 
+  font-weight: bold; 
 }
